@@ -1,0 +1,10 @@
+{
+  "name": "kratoApp",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.1.0"
+  },
+  "dependencies": {
+    "firebase-util": "~0.2.5"
+  }
+}
