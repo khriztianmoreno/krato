@@ -65,6 +65,17 @@
                     controller: 'companyController'
                   }
                 }
+            })
+            .state('app.favorites', {
+                url: '/favorites',
+                //cache: true,
+                views: {
+                  'viewContent': {
+                    templateUrl: 'app/favorites/favorites.html',
+                    controller: 'favoritesController',
+                    controllerAs: 'fav'
+                  }
+                }
             });
             $urlRouterProvider.otherwise("/account/login");
         });

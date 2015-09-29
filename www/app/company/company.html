@@ -10,24 +10,29 @@
 				<p>
 					{{shop.about}}
 				</p>
-				<p>
-					<a href="#" class="subdued">{{shop.rating}} Rating</a>
-					<a href="#" class="subdued">{{shop.subscriptors.length}} Subscritors</a>
-				</p>
 			</div>
 			<div class="item tabs tabs-secondary tabs-icon-left">
 				<a class="tab-item" href="#">
-				<i class="icon ion-thumbsup"></i>
-				Like
+				<i class="icon ion-star"></i>
+				{{shop.rating}} Rating
 				</a>
 				<a class="tab-item" href="#">
 				<i class="icon ion-chatbox"></i>
-				Comment
+				{{shop.subscriptors.length}} Subscritors
 				</a>
 				<a class="tab-item" href="#">
-				<i class="icon ion-share"></i>
-				Share
+				<i class="icon ion-heart"></i>
+				Favorite
 				</a>
+			</div>
+			<div class="item item-body">
+				<h2>List subscriptors</h2>
+				<ion-list class="list">
+				    <div class="item item-avatar">
+				      <img src="{{shop.picture}}">
+				      <h2>Venkman</h2>
+				    </div>
+				</ion-list>
 			</div>
 		</div>
 	</ion-content>
