@@ -15,7 +15,7 @@
 	                Utils.hide();
 	                console.log("Antes de loguear:" + JSON.stringify(user));
 	                Utils.alertshow("Successfully", "The User was Successfully Created.");
-	                $state.go('app.login');
+	                $state.go('account.login');
 	            }, function (err) {
 	                Utils.hide();
 	                Utils.errMessage(err);
