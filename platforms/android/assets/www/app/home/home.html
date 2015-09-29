@@ -1,0 +1,41 @@
+<ion-view view-title="Home">
+
+	<ion-nav-buttons class="bar-positive" side="left" >
+		<button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+			</button>
+        <div class="bar bar-header item-input-inset" ng-if="hasFilters">
+            <label class="item-input-wrapper textbox-search">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="searchText">
+            </label>
+
+        </div>
+    </ion-nav-buttons>
+    <ion-nav-title  ng-show="!hasFilters">
+        Home
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+
+        <a data-tap-disabled="true" class=" button button-icon icon positive" ng-click="openFilters(hasFilters);" ng-class="{'ion-search':!hasFilters,'ion-close-circled':hasFilters}"></a>
+    </ion-nav-buttons>
+
+
+	<ion-content>
+		<div class="content">
+			<h1>Hello {{nombre}} There!</h1>
+			<button ng-click="logOut()" class="button button-clear button-positive">Logout</button>
+			<ion-list can-swipe="true">
+	          	<ion-item item="group" collection-repeat="shop in shops" collection-item-width="'100%'" collection-item-height="100" href="#/app/company/{{shop.id}}" class="item-thumbnail-left" hold-list>
+	          		<img ng-src="{{shop.picture}}" onerror="this.src = 'https://www.ginesisnatural.com/images/no_image.jpg';">
+	          		<h2>{{shop.company}}</h2>
+							<p>{{shop.about}}</p>
+							<p>
+								Rating: <span class="badge-assertive">{{shop.rating}}</span>
+							</p>
+	          		<ion-option-button class="button-assertive icon ion-heart"></ion-option-button>
+	          	</ion-item>
+	          	<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
+	          </ion-list>
+		</div>
+	</ion-content>
+</ion-view>
