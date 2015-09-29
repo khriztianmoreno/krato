@@ -5,6 +5,7 @@
     "ionic": "driftyco/ionic-bower#1.1.0"
   },
   "dependencies": {
-    "firebase-util": "~0.2.5"
+    "firebase-util": "~0.2.5",
+    "ionic-rating": "~0.1.0"
   }
 }

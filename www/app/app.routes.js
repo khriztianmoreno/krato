@@ -11,7 +11,7 @@
             })
             .state('account.login', {
                 url: '/login',
-                //cache: true,
+                cache: true,
                 views: {
                   'menuContent': {
                     templateUrl: 'app/account/login/login.html',
@@ -21,7 +21,7 @@
             })
             .state('account.forgot', {
                 url: '/forgot',
-                //cache: true,
+                cache: true,
                 views: {
                   'menuContent': {
                     templateUrl: 'app/account/forgot/forgot.html',
@@ -31,7 +31,7 @@
             })
             .state('account.register', {
                 url: '/register',
-                //cache: true,
+                cache: true,
                 views: {
                   'menuContent': {
                     templateUrl: 'app/account/register/register.html',
@@ -48,11 +48,21 @@
             })
             .state('app.home', {
                 url: '/home',
-                //cache: true,
+                cache: true,
                 views: {
                   'viewContent': {
                     templateUrl: 'app/home/home.html',
                     controller: 'homeController'
+                  }
+                }
+            })
+            .state('app.company', {
+                url: '/company/:id',
+                //cache: true,
+                views: {
+                  'viewContent': {
+                    templateUrl: 'app/company/company.html',
+                    controller: 'companyController'
                   }
                 }
             });

@@ -8,7 +8,7 @@ angular.module('kratoApp', [
 	'ngMessages'
 ])
 // Changue this for your Firebase App URL.
-.constant('FURL', 'https://krato.firebaseio.com/')
+.constant('FURL', 'https://datakratos.firebaseio.com/')
 .run(function ($ionicPlatform) {
 	$ionicPlatform.ready(function () {
 		// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
