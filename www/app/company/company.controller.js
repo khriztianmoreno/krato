@@ -10,7 +10,7 @@
     	var baseRef = new Firebase(FURL + 'shops/' + $stateParams.id);
     	// create a scrollable reference
         $scope.shop = $firebaseObject(baseRef);  
-        
+
         Utils.show();
         $scope.shop.$loaded(function (val){
         	Utils.hide();

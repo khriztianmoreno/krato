@@ -18,7 +18,8 @@
 				</a>
 				<a class="tab-item" href="#">
 				<i class="icon ion-chatbox"></i>
-				{{shop.subscriptors.length}} Subscritors
+					<span ng-if="shop.subscriptors === '[]'">0 Subscritors</span>
+					<span ng-if="shop.subscriptors !== '[]'">{{shop.subscriptors.length}} Subscritors</span>
 				</a>
 				<a class="tab-item" href="#">
 				<i class="icon ion-heart"></i>
@@ -28,9 +29,10 @@
 			<div class="item item-body">
 				<h2>List subscriptors</h2>
 				<ion-list class="list">
-				    <div class="item item-avatar">
-				      <img src="{{shop.picture}}">
-				      <h2>Venkman</h2>
+					<p ng-if="shop.subscriptors === '[]' ">No subscribed</p>
+				    <div class="item item-avatar" ng-repeat="subscriptor in shop.subscriptors">
+				      <img src="{{subscriptor.picture}}">
+				      <h2>{{subscriptor.fullName}}</h2>
 				    </div>
 				</ion-list>
 			</div>
