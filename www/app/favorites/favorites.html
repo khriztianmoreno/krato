@@ -14,7 +14,8 @@
 			</div>
 			<span class="item" ng-if="markets.length === 0">Add a favorite</span>
 			<a class="item" ng-repeat="market in markets" href="#/app/company/{{market.id}}">
-			{{market.name}}
+				<i class="icon ion-heart"></i>
+				{{market.name}}
 			</a>
 			<div class="item item-divider">
 				Liqour Store

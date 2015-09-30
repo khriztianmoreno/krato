@@ -2,7 +2,7 @@
 	<ion-content>
 		<div class="list card">
 			<div class="item item-avatar">
-				<img src="{{shop.picture}}">
+				<img src="{{shop.picture}}" />
 				<h2>{{shop.company}}</h2>
 				<p>{{shop.type}}</p>
 			</div>
@@ -10,24 +10,31 @@
 				<p>
 					{{shop.about}}
 				</p>
-				<p>
-					<a href="#" class="subdued">{{shop.rating}} Rating</a>
-					<a href="#" class="subdued">{{shop.subscriptors.length}} Subscritors</a>
-				</p>
 			</div>
 			<div class="item tabs tabs-secondary tabs-icon-left">
 				<a class="tab-item" href="#">
-				<i class="icon ion-thumbsup"></i>
-				Like
+				<i class="icon ion-star"></i>
+				{{shop.rating}} Rating
 				</a>
 				<a class="tab-item" href="#">
 				<i class="icon ion-chatbox"></i>
-				Comment
+					<span ng-if="shop.subscriptors === '[]'">0 Subscritors</span>
+					<span ng-if="shop.subscriptors !== '[]'">{{shop.subscriptors.length}} Subscritors</span>
 				</a>
 				<a class="tab-item" href="#">
-				<i class="icon ion-share"></i>
-				Share
+				<i class="icon ion-heart"></i>
+				Favorite
 				</a>
+			</div>
+			<div class="item item-body">
+				<h2>List subscriptors</h2>
+				<ion-list class="list">
+					<p ng-if="shop.subscriptors === '[]' ">No subscribed</p>
+				    <div class="item item-avatar" ng-repeat="subscriptor in shop.subscriptors" ng-if="shop.subscriptors !== '[]'">
+				      <img src="{{subscriptor.picture}}" />
+				      <h2>{{subscriptor.fullName}}</h2>
+				    </div>
+				</ion-list>
 			</div>
 		</div>
 	</ion-content>

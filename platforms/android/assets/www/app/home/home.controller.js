@@ -3,9 +3,9 @@
     angular.module('kratoApp')
         .controller('homeController', homeController);
 
-    homeController.$inject = ['Auth', 'FURL', 'Utils', '$firebaseArray', '$location', '$scope'];
+    homeController.$inject = ['Auth', 'FURL', 'Utils', '$firebaseArray', '$location', '$scope', 'favoriteFactory'];
 
-    function homeController(Auth, FURL, Utils, $firebaseArray, $location, $scope) {
+    function homeController(Auth, FURL, Utils, $firebaseArray, $location, $scope, favoriteFactory) {
 
         // create a connection to Firebase
         var baseRef = new Firebase(FURL + 'shops');
@@ -16,7 +16,7 @@
         // create a synchronized array on scope
         $scope.shops = $firebaseArray(scrollRef);
         // load the first three contacts
-        scrollRef.scroll.next(5);
+        scrollRef.scroll.next(20);
 
         Utils.show();
         $scope.shops.$loaded(function() {
@@ -26,7 +26,7 @@
         // This function is called whenever the user reaches the bottom
         $scope.loadMore = function() {
             // load the next contact
-            scrollRef.scroll.next(1);
+            scrollRef.scroll.next(10);
             $scope.$broadcast('scroll.infiniteScrollComplete');
         };
 
@@ -38,6 +38,14 @@
         $scope.hasFilters = false;
         $scope.openFilters = function(val){
             $scope.hasFilters = !val;
+        };
+
+        $scope.events = {
+            saveFav: saveFav
+        };
+
+        function saveFav(fav){
+            favoriteFactory.save(fav);
         };
     };
 })();

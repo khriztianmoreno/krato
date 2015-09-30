@@ -5,7 +5,7 @@
             $stateProvider.state('account', {
                 url: '/account',
                 abstract: true,
-                templateUrl: './../components/menu/menu.html',
+                templateUrl: 'components/menu/menu.html',
                 controller: 'menuController',
                 controllerAs: 'menu'
             })
@@ -42,7 +42,7 @@
             .state('app', {
                 url: '/app',
                 abstract: true,
-                templateUrl: './../components/menu/menuApp.html',
+                templateUrl: 'components/menu/menuApp.html',
                 controller: 'menuController',
                 controllerAs: 'menu'
             })

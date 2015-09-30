@@ -30,8 +30,8 @@
 				<h2>List subscriptors</h2>
 				<ion-list class="list">
 					<p ng-if="shop.subscriptors === '[]' ">No subscribed</p>
-				    <div class="item item-avatar" ng-repeat="subscriptor in shop.subscriptors">
-				      <img src="{{subscriptor.picture}}">
+				    <div class="item item-avatar" ng-repeat="subscriptor in shop.subscriptors" ng-if="shop.subscriptors !== '[]'">
+				      <img src="{{subscriptor.picture}}" />
 				      <h2>{{subscriptor.fullName}}</h2>
 				    </div>
 				</ion-list>
