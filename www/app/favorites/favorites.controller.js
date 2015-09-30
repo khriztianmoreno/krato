@@ -4,9 +4,9 @@
 	angular.module('kratoApp')
         .controller('favoritesController', favoritesController);
 
-    favoritesController.$inject = ['$location'];
+    favoritesController.$inject = ['favoriteFactory'];
 
-    function favoritesController($location) {
+    function favoritesController(favoriteFactory) {
 
     };
 })();

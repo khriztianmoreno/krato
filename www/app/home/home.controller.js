@@ -3,9 +3,9 @@
     angular.module('kratoApp')
         .controller('homeController', homeController);
 
-    homeController.$inject = ['Auth', 'FURL', 'Utils', '$firebaseArray', '$location', '$scope'];
+    homeController.$inject = ['Auth', 'FURL', 'Utils', '$firebaseArray', '$location', '$scope', 'favoriteFactory'];
 
-    function homeController(Auth, FURL, Utils, $firebaseArray, $location, $scope) {
+    function homeController(Auth, FURL, Utils, $firebaseArray, $location, $scope, favoriteFactory) {
 
         // create a connection to Firebase
         var baseRef = new Firebase(FURL + 'shops');
@@ -38,6 +38,14 @@
         $scope.hasFilters = false;
         $scope.openFilters = function(val){
             $scope.hasFilters = !val;
+        };
+
+        $scope.events = {
+            saveFav: saveFav
+        };
+
+        function saveFav(fav){
+            favoriteFactory.save(fav);
         };
     };
 })();

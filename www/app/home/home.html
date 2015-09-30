@@ -6,7 +6,7 @@
         <div class="bar bar-header item-input-inset" ng-if="hasFilters">
             <label class="item-input-wrapper textbox-search">
                 <i class="icon ion-ios7-search placeholder-icon"></i>
-                <input type="text" placeholder="Search" ng-model="searchText">
+                <input type="text" placeholder="Search" ng-model="searchText" />
             </label>
 
         </div>
@@ -22,7 +22,7 @@
 
 	<ion-content>
 		<div class="content">
-			<h1>Hello {{nombre}} There!</h1>
+			<h1>Hello There!</h1>
 			<button ng-click="logOut()" class="button button-clear button-positive">Logout</button>
 			<ion-list can-swipe="true">
 	          	<ion-item item="group" collection-repeat="shop in shops" collection-item-width="'100%'" collection-item-height="100" href="#/app/company/{{shop.id}}" class="item-thumbnail-left" hold-list>
@@ -32,7 +32,7 @@
 							<p>
 								Rating: <span class="badge-assertive">{{shop.rating}}</span>
 							</p>
-	          		<ion-option-button class="button-assertive icon ion-heart"></ion-option-button>
+	          		<ion-option-button class="button-assertive icon ion-heart" ng-click="events.saveFav(shop)"></ion-option-button>
 	          	</ion-item>
 	          	<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
 	          </ion-list>

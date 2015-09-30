@@ -6,6 +6,6 @@
   },
   "dependencies": {
     "firebase-util": "~0.2.5",
-    "ionic-rating": "~0.1.0"
+    "lodash": "~3.10.1"
   }
 }
