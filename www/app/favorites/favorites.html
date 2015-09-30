@@ -4,26 +4,25 @@
 			<div class="item item-divider">
 				Pharmacy
 			</div>
-			<a class="item" href="#">
-			Butterfinger
-			</a>
-			<a class="item" href="#">
-			Butterfinger
-			</a>
-			<a class="item" href="#">
-			Butterfinger
+			<span class="item" ng-if="pharmacy.length === 0">Add a favorite</span>
+			<a class="item" ng-repeat="pharmacy in pharmacys"  href="#/app/company/{{pharmacy.id}}">
+				<i class="icon ion-heart"></i>
+				{{pharmacy.name}}
 			</a>
 			<div class="item item-divider">
 				Market
 			</div>
-			<a class="item" href="#">
-			Butterfinger
+			<span class="item" ng-if="markets.length === 0">Add a favorite</span>
+			<a class="item" ng-repeat="market in markets" href="#/app/company/{{market.id}}">
+			{{market.name}}
 			</a>
-			<a class="item" href="#">
-			Butterfinger
-			</a>
-			<a class="item" href="#">
-			Butterfinger
+			<div class="item item-divider">
+				Liqour Store
+			</div>
+			<span class="item" ng-if="liqours.length === 0">Add a favorite</span>
+			<a class="item" ng-repeat="liqour in liqours" href="#/app/company/{{liqour.id}}">
+				<i class="icon ion-heart"></i>
+				{{liqour.name}}
 			</a>
 		</div>
 	</ion-content>

@@ -72,8 +72,8 @@
                 views: {
                   'viewContent': {
                     templateUrl: 'app/favorites/favorites.html',
-                    controller: 'favoritesController',
-                    controllerAs: 'fav'
+                    controller: 'favoritesController'
+                    //controllerAs: 'fav'
                   }
                 }
             });
