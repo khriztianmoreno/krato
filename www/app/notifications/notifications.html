@@ -1,0 +1,23 @@
+<ion-view view-title="Notifications">
+	<ion-content>
+		<ul class="list">
+		  <li class="item item-toggle">
+		     Krono app
+		     <label class="toggle toggle-assertive">
+		       <input type="checkbox">
+		       <div class="track">
+		         <div class="handle"></div>
+		       </div>
+		     </label>
+		  </li>
+		</ul>
+		<button class="button button-block button-dark" ng-click="identifyUser()">
+        Identify a user
+      </button>
+ 
+      <button class="button button-block button-positive" ng-if="identified" ng-click="pushRegister()">
+        Register for Push
+      </button>
+
+	</ion-content>
+</ion-view>

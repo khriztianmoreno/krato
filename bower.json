@@ -2,10 +2,14 @@
   "name": "kratoApp",
   "private": "true",
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.1.0"
+    "angular-websocket": "~1.0.14",
+    "ionic": "driftyco/ionic-bower#1.1.0",
+    "ionic-service-core": "~0.1.10",
+    "ionic-service-push": "~0.1.13"
   },
   "dependencies": {
     "firebase-util": "~0.2.5",
-    "lodash": "~3.10.1"
+    "lodash": "~3.10.1",
+    "ionic-service-core": "~0.1.10"
   }
 }

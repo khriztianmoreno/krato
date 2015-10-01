@@ -76,6 +76,16 @@
                     //controllerAs: 'fav'
                   }
                 }
+            })
+            .state('app.notifications', {
+                url: '/notifications',
+                //cache: true,
+                views: {
+                  'viewContent': {
+                    templateUrl: 'app/notifications/notifications.html',
+                    controller: 'NotificationsController'
+                  }
+                }
             });
             $urlRouterProvider.otherwise("/account/login");
         });
