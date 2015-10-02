@@ -45,6 +45,9 @@
 		937761DBF2CA4DC4BB82F0CF /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EABEC13A5F4056971C023A /* CDVDevice.m */; };
 		BADD397BC2714B06813CCB76 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B2859DA77E41415098E2B02B /* CDVSplashScreen.m */; };
 		888D1BDC48A8482789ECB8F0 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 249D558777C7498C98929546 /* CDVViewController+SplashScreen.m */; };
+		3139525F6AB343E2A648FCEF /* CDVGlobalization.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EE7A77ACD843F298EB6A64 /* CDVGlobalization.m */; };
+		EF9A0680E93D47CFADC59B1D /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = FA04A2B7BB0D4B24900A8B7A /* AppDelegate+notification.m */; };
+		4F131E8716A641E8913C3AA5 /* PushPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E2994C05C20D433D84D8606F /* PushPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,12 @@
 		249D558777C7498C98929546 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		1B1D5D4DD811408DA32D8D88 /* CDVSplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		AB96F773C9044EEEB7E10A58 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		B0EE7A77ACD843F298EB6A64 /* CDVGlobalization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVGlobalization.m"; path = "org.apache.cordova.globalization/CDVGlobalization.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		4D85934B6216442DAF935371 /* CDVGlobalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVGlobalization.h"; path = "org.apache.cordova.globalization/CDVGlobalization.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		FA04A2B7BB0D4B24900A8B7A /* AppDelegate+notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+notification.m"; path = "com.phonegap.plugins.PushPlugin/AppDelegate+notification.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		E2994C05C20D433D84D8606F /* PushPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PushPlugin.m"; path = "com.phonegap.plugins.PushPlugin/PushPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		741A541C2AC648BC8D273C15 /* AppDelegate+notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+notification.h"; path = "com.phonegap.plugins.PushPlugin/AppDelegate+notification.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		9872A5CB4D594A7593DC8AE4 /* PushPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PushPlugin.h"; path = "com.phonegap.plugins.PushPlugin/PushPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +241,12 @@
 				249D558777C7498C98929546 /* CDVViewController+SplashScreen.m */,
 				1B1D5D4DD811408DA32D8D88 /* CDVSplashScreen.h */,
 				AB96F773C9044EEEB7E10A58 /* CDVViewController+SplashScreen.h */,
+				B0EE7A77ACD843F298EB6A64 /* CDVGlobalization.m */,
+				4D85934B6216442DAF935371 /* CDVGlobalization.h */,
+				FA04A2B7BB0D4B24900A8B7A /* AppDelegate+notification.m */,
+				E2994C05C20D433D84D8606F /* PushPlugin.m */,
+				741A541C2AC648BC8D273C15 /* AppDelegate+notification.h */,
+				9872A5CB4D594A7593DC8AE4 /* PushPlugin.h */,
 			);
 			name = Plugins;
 			path = "HelloCordova/Plugins";
@@ -422,6 +437,9 @@
 				937761DBF2CA4DC4BB82F0CF /* CDVDevice.m in Sources */,
 				BADD397BC2714B06813CCB76 /* CDVSplashScreen.m in Sources */,
 				888D1BDC48A8482789ECB8F0 /* CDVViewController+SplashScreen.m in Sources */,
+				3139525F6AB343E2A648FCEF /* CDVGlobalization.m in Sources */,
+				EF9A0680E93D47CFADC59B1D /* AppDelegate+notification.m in Sources */,
+				4F131E8716A641E8913C3AA5 /* PushPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

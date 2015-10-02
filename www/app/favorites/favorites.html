@@ -4,7 +4,7 @@
 			<div class="item item-divider">
 				Pharmacy
 			</div>
-			<span class="item" ng-if="pharmacy.length === 0">Add a favorite</span>
+			<span class="item" ng-if="pharmacys.length === 0">Add a favorite</span>
 			<a class="item" ng-repeat="pharmacy in pharmacys"  href="#/app/company/{{pharmacy.id}}">
 				<i class="icon ion-heart"></i>
 				{{pharmacy.name}}

@@ -21,7 +21,7 @@
 					<span ng-if="shop.subscriptors === '[]'">0 Subscritors</span>
 					<span ng-if="shop.subscriptors !== '[]'">{{shop.subscriptors.length}} Subscritors</span>
 				</a>
-				<a class="tab-item" href="#">
+				<a class="tab-item" href="#" ng-click="events.saveFav(shop)">
 				<i class="icon ion-heart"></i>
 				Favorite
 				</a>

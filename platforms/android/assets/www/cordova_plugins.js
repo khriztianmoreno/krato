@@ -39,6 +39,27 @@ module.exports = [
         "file": "plugins/cordova-plugin-whitelist/whitelist.js",
         "id": "cordova-plugin-whitelist.whitelist",
         "runs": true
+    },
+    {
+        "file": "plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js",
+        "id": "com.phonegap.plugins.PushPlugin.PushNotification",
+        "clobbers": [
+            "PushNotification"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.globalization/www/GlobalizationError.js",
+        "id": "org.apache.cordova.globalization.GlobalizationError",
+        "clobbers": [
+            "window.GlobalizationError"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.globalization/www/globalization.js",
+        "id": "org.apache.cordova.globalization.globalization",
+        "clobbers": [
+            "navigator.globalization"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -48,7 +69,10 @@ module.exports.metadata =
     "cordova-plugin-console": "1.0.1",
     "cordova-plugin-device": "1.0.1",
     "cordova-plugin-splashscreen": "2.1.0",
-    "cordova-plugin-whitelist": "1.1.0"
+    "cordova-plugin-whitelist": "1.1.0",
+    "com.phonegap.plugins.PushPlugin": "2.5.3",
+    "org.apache.cordova.globalization": "0.3.4",
+    "com.google.playservices": "21.0.1"
 }
 // BOTTOM OF METADATA
 });
